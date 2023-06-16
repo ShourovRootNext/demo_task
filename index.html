@@ -8,308 +8,99 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ee788baf02.js" crossorigin="anonymous"></script>
-    <!-- <style>
-        .left-sidebar {
-            width: 50px;
-            height: 100vh;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            /* justify-content: space-between; */
-        }
 
-        .top-icons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .bottom-icons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        .sidebar-icon {
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            color: white;
-            position: relative;
-            /* Add position relative to the icon container */
-        }
-
-        .sidebar-icon i {
-            margin-bottom: 10px;
-        }
-
-        .tooltip {
-            position: absolute;
-            top: 50%;
-            left: 40px;
-            transform: translateX(10px) translateY(-50%);
-            background-color: #444;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .folder-name {
-            display: block;
-            margin-bottom: 5px;
-            padding: 10px 20px;
-            /* font */
-        }
-
-        .sidebar-icon:hover .tooltip {
-            opacity: 1;
-            visibility: visible;
-            background-color: #444;
-        }
-
-        .content {
-            margin-left: 50px;
-            padding: 20px;
-        }
-    </style> -->
     <style>
-        .left-sidebar {
-            width: 50px;
-            height: 100vh;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .top-icons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .bottom-icons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        .sidebar-icon {
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            color: white;
-            position: relative;
-        }
-
-        .sidebar-icon i {
-            margin-bottom: 10px;
-        }
-
-        .tooltip {
-            position: absolute;
-            top: 120px;
-            left: calc(100% - 10px);
-            transform: translateX(10px) translateY(-50%);
-            background-color: #444;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .folder-name {
-            display: block;
-            margin-bottom: 5px;
-            padding: 10px 20px;
-            border-bottom: 1px solid white;
-        }
-        .folder-name:last-child {
-            border-bottom: none;
-        }
-        .sub-tooltip {
-            position: absolute;
-            top: 0;
-            left: 99%;
-            background-color: #444;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .sub-folder-name {
-            display: block;
-            margin-bottom: 5px;
-            padding: 10px 20px;
-            border-bottom: 1px solid white;
-        }
-        .sub-folder-name:last-child {
-            border-bottom: none;
-        }
-
-        .folder-name:hover{
-            background-color: #363636;
-        }
-        .folder-name:hover .sub-tooltip {
-            opacity: 1;
-            visibility: visible;
-            background-color: #363636;
-        }
-
-
-        .sidebar-icon:hover,
-        .sidebar-icon:focus {
-            background-color: #444;
-        }
-
-        .sidebar-icon:hover .tooltip {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .content {
-            margin-left: 50px;
-            padding: 20px;
-        }
     </style>
 </head>
 
 <body>
-    <div class="left-sidebar">
-        <div class="top-icons">
-            <div class="sidebar-icon" data-tooltip="Home">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/mode-plus-on.svg"
-                    alt="" srcset="">
-                <div class="tooltip">
-                    <span class="folder-name">Home1
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">Home11</span>
-                            <span class="sub-folder-name">Home12</span>
-                            <span class="sub-folder-name">Home13</span>
-                            <span class="sub-folder-name">Home14</span>
-                            <span class="sub-folder-name">Home15</span>
-                        </div>
-                    </span>
-                    <span class="folder-name">Home2
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">Home21</span>
-                            <span class="sub-folder-name">Home22</span>
-                            <span class="sub-folder-name">Home23</span>
-                            <span class="sub-folder-name">Home24</span>
-                            <span class="sub-folder-name">Home25</span>
-                        </div>
-                    </span>
-                    <span class="folder-name">Home3
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">Home31</span>
-                            <span class="sub-folder-name">Home32</span>
-                            <span class="sub-folder-name">Home33</span>
-                            <span class="sub-folder-name">Home34</span>
-                            <span class="sub-folder-name">Home35</span>
-                        </div>
-                    </span>
-                    <span class="folder-name">Home4
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">Home41</span>
-                            <span class="sub-folder-name">Home42</span>
-                            <span class="sub-folder-name">Home43</span>
-                            <span class="sub-folder-name">Home44</span>
-                            <span class="sub-folder-name">Home45</span>
-                        </div>
-                    </span>
-                    <span class="folder-name">Home5
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">Home55</span>
-                            <span class="sub-folder-name">Home52</span>
-                            <span class="sub-folder-name">Home53</span>
-                            <span class="sub-folder-name">Home54</span>
-                            <span class="sub-folder-name">Home55</span>
-                        </div>
-                    </span>
+    <!-- <div class="container-fluid bg-gray"> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand  d-lg-none d-block" href="#">
+                    <img src="http://sellnoir.devs/buynoir/superlandpage/assets/img/Buynoir.gif" alt="Logo" width="120" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand d-flex justify-content-center d-lg-block d-none  me-auto" href="#">
+                        <img src="http://sellnoir.devs/buynoir/superlandpage/assets/img/Buynoir.gif" alt="Logo" width="120" height="30">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="sidebar-icon" data-tooltip="User">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/mode-drop.svg"
-                    alt="" srcset="">
-                <div class="tooltip">
-                    <span class="folder-name">User1
-                        <div class="sub-tooltip">
-                            <span class="sub-folder-name">User11</span>
-                            <span class="sub-folder-name">User12</span>
-                            <span class="sub-folder-name">User13</span>
-                            <span class="sub-folder-name">User14</span>
-                            <span class="sub-folder-name">User15</span>
-                        </div>
-                    </span>
-                    <span class="folder-name">User2</span>
-                    <span class="folder-name">User3</span>
-                    <span class="folder-name">User4</span>
-                    <span class="folder-name">User5</span>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="http://sellnoir.devs/buynoir/superlandpage/assets/img/Buynoir.gif" alt="Logo" width="120" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="sidebar-icon" data-tooltip="Settings">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/mode-list.svg"
-                    alt="" srcset="">
-                <div class="tooltip">
-                    <span class="folder-name">Settings1</span>
-                    <span class="folder-name">Settings2</span>
-                    <span class="folder-name">Settings3</span>
-                    <span class="folder-name">Settings4</span>
-                    <span class="folder-name">Settings5</span>
-                </div>
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/section-bg.svg"
-                    alt="" srcset="">
-            </div>
-        </div>
-        <div class="bottom-icons">
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-mobile.svg"
-                    alt="" srcset="">
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-tablet.svg"
-                    alt="" srcset="">
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-desktop.svg"
-                    alt="" srcset="">
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-redo.svg"
-                    alt="" srcset="">
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-undo.svg"
-                    alt="" srcset="">
-            </div>
-            <div class="sidebar-icon">
-                <img src="https://larabuilder.spotlayer.com/public/backend/assets/builder/images/builder-icons/lg-publishing.svg"
-                    alt="" srcset="">
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <h1>Hello, world!</h1>
-    </div>
+        </nav>
+    <!-- </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
